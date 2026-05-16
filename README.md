@@ -6,6 +6,6 @@
 
 <br />
 
-## Have I been active lately  ?
+## Have I been active lately?
 
 ![kumi369's GitHub Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kumi369&theme=github)
