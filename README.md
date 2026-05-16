@@ -1,8 +1,5 @@
-<br />
-<br />
+## "What I cannot create, I do not understand"
 
-## “What I cannot create, I do not understand”
+---
 
-<hr />
-
-<p align="right">Richard Feynman</p>
+<p align="right"><strong>Richard Feynman</strong></p>
