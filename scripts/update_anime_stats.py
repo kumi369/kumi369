@@ -23,6 +23,7 @@ class Stats:
     total_issues: int
     contributed_repos: int
     year_label: int
+    updated_label: str
 
 
 def github_graphql(query: str, variables: dict) -> dict:
@@ -122,6 +123,7 @@ def fetch_contribution_stats() -> Stats:
         total_issues=contributions["totalIssueContributions"],
         contributed_repos=contributions["totalRepositoriesWithContributedCommits"],
         year_label=now.year,
+        updated_label=now.strftime("%d %b %Y %H:%M UTC"),
     )
 
 
@@ -130,7 +132,7 @@ def build_svg(stats: Stats) -> str:
   <rect width="920" height="310" rx="20" fill="#FFFFFF"/>
   <rect x="1.5" y="1.5" width="917" height="307" rx="18.5" stroke="#E5E7EB" stroke-width="3"/>
   <text x="42" y="58" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">GitHub Stats</text>
-  <text x="42" y="86" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="15">anime mode • auto-updating</text>
+  <text x="42" y="86" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="15">anime mode - auto-updating</text>
 
   <rect x="38" y="118" width="380" height="42" rx="14" fill="#F8FAFC"/>
   <text x="58" y="145" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Total Stars</text>
@@ -172,6 +174,7 @@ def build_svg(stats: Stats) -> str:
     <path d="M72 276H92" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
     <path d="M132 276H152" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
   </g>
+  <text x="42" y="286" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Last updated: {stats.updated_label}</text>
 </svg>
 """
 
