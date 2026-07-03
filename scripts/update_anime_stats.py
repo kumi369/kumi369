@@ -152,7 +152,7 @@ def build_svg(stats: Stats) -> str:
 
   <rect x="450" y="198" width="180" height="65" rx="18" fill="#ECFEFF"/>
   <text x="470" y="225" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Contributed</text>
-  <text x="470" y="250" fill="#1E293B" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">{stats.contributed_repos}</text>
+  <text x="470" y="248" fill="#1E293B" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">{stats.contributed_repos}</text>
 
   <g transform="translate(670 78)">
     <path d="M62 14L90 34L78 0L62 14Z" fill="#5B7CFA"/>
